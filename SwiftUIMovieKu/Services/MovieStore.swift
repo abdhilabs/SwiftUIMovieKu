@@ -27,7 +27,7 @@ class MovieStore: MovieService {
     }
     
     func fetchMovie(id: Int, completion: @escaping (Result<Movie, MovieError>) -> ()) {
-        guard let url = URL(string: "\(baseAPIURL)/movie/\(id)")else{
+        guard let url = URL(string: "\(baseAPIURL)/movie/\(id)") else {
             completion(.failure(.invalidEndpoint))
             return
         }
